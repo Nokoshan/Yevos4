@@ -17,7 +17,7 @@ public class Diebold_Call_In extends AppCompatActivity {
 
 
         //  initiate the edit text
-        time = findViewById(R.id.editText3);
+        time = findViewById(R.id.heureDepart);
 
         // perform click event listener on edit text
         time.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +58,7 @@ public class Diebold_Call_In extends AppCompatActivity {
 
             }
         });
-        time2 = findViewById(R.id.editText4);
+        time2 = findViewById(R.id.heureDebut);
         time2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

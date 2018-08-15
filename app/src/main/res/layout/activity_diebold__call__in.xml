@@ -21,11 +21,11 @@
             android:layout_height="29dp"
             android:layout_marginStart="16dp"
             android:text="# Diebold"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+            app:layout_constraintBaseline_toBaselineOf="@+id/numDiebold"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/numDiebold"
             android:layout_width="0dp"
             android:layout_height="37dp"
             android:layout_marginEnd="16dp"
@@ -37,7 +37,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/editText7" />
+            app:layout_constraintTop_toBottomOf="@+id/nomEta" />
 
         <TextView
             android:id="@+id/textView3"
@@ -45,11 +45,11 @@
             android:layout_height="26dp"
             android:layout_marginStart="16dp"
             android:text="# Desjardins"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/numDesj"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/numDesj"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginEnd="16dp"
@@ -61,7 +61,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
+            app:layout_constraintTop_toBottomOf="@+id/numDiebold" />
 
         <TextView
             android:id="@+id/textView4"
@@ -69,11 +69,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Départ"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/heureDepart"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/heureDepart"
             android:layout_width="106dp"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
@@ -82,9 +82,9 @@
             android:focusableInTouchMode="false"
             android:hint="@string/heure"
             android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="@+id/editText4"
+            app:layout_constraintBottom_toBottomOf="@+id/heureDebut"
             app:layout_constraintStart_toEndOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/editText2"
+            app:layout_constraintTop_toBottomOf="@+id/numDesj"
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
@@ -93,11 +93,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Début"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText4"
-            app:layout_constraintStart_toEndOf="@+id/editText3" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/heureDebut"
+            app:layout_constraintStart_toEndOf="@+id/heureDepart" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/heureDebut"
             android:layout_width="111dp"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
@@ -106,7 +106,7 @@
             android:hint="@string/heure"
             android:inputType="textPersonName"
             app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintTop_toBottomOf="@+id/numDesj" />
 
         <TextView
             android:id="@+id/textView6"
@@ -115,26 +115,26 @@
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:text="Fin"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText5"
-            app:layout_constraintEnd_toStartOf="@+id/editText5"
+            app:layout_constraintBaseline_toBaselineOf="@+id/heureFin"
+            app:layout_constraintEnd_toStartOf="@+id/heureFin"
             app:layout_constraintHorizontal_bias="0.666"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/heureFin"
             android:layout_width="105dp"
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/heure"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/editText3"
+            app:layout_constraintEnd_toEndOf="@+id/heureDepart"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/editText3"
-            app:layout_constraintTop_toBottomOf="@+id/editText3" />
+            app:layout_constraintStart_toStartOf="@+id/heureDepart"
+            app:layout_constraintTop_toBottomOf="@+id/heureDepart" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/heureRetour"
             android:layout_width="112dp"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
@@ -142,9 +142,9 @@
             android:ems="10"
             android:hint="@string/heure"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/editText4"
+            app:layout_constraintEnd_toEndOf="@+id/heureDebut"
             app:layout_constraintStart_toEndOf="@+id/textView7"
-            app:layout_constraintTop_toBottomOf="@+id/editText4" />
+            app:layout_constraintTop_toBottomOf="@+id/heureDebut" />
 
         <TextView
             android:id="@+id/textView7"
@@ -152,8 +152,8 @@
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
             android:text="Retour"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText6"
-            app:layout_constraintStart_toEndOf="@+id/editText5" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/heureRetour"
+            app:layout_constraintStart_toEndOf="@+id/heureFin" />
 
         <TextView
             android:id="@+id/textView8"
@@ -161,11 +161,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Nom établissement"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText7"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nomEta"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editText7"
+            android:id="@+id/nomEta"
             android:layout_width="0dp"
             android:layout_height="39dp"
             android:layout_marginEnd="16dp"
@@ -176,7 +176,7 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/editText8" />
+            app:layout_constraintTop_toBottomOf="@+id/nomTech" />
 
         <TextView
             android:id="@+id/textView9"
@@ -184,11 +184,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Nom Tech"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText8"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nomTech"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editText8"
+            android:id="@+id/nomTech"
             android:layout_width="0dp"
             android:layout_height="39dp"
             android:layout_marginEnd="16dp"
@@ -207,11 +207,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="Module"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText9"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nomModule"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/editText9"
+            android:id="@+id/nomModule"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -222,7 +222,7 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/editText5" />
+            app:layout_constraintTop_toBottomOf="@+id/heureFin" />
 
         <TextView
             android:id="@+id/textView11"
@@ -232,10 +232,10 @@
             android:layout_marginTop="16dp"
             android:text="Travail"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText9" />
+            app:layout_constraintTop_toBottomOf="@+id/nomModule" />
 
         <EditText
-            android:id="@+id/editText11"
+            android:id="@+id/textTravail"
             android:layout_width="0dp"
             android:layout_height="247dp"
             android:layout_marginEnd="16dp"
@@ -246,7 +246,7 @@
             android:inputType="textMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView11"
-            app:layout_constraintTop_toBottomOf="@+id/editText9" />
+            app:layout_constraintTop_toBottomOf="@+id/nomModule" />
 
         <Spinner
             android:id="@+id/spinner3"
@@ -257,7 +257,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText11" />
+            app:layout_constraintTop_toBottomOf="@+id/textTravail" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
