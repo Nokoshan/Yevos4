@@ -1,5 +1,13 @@
 <resources>
+    <string name="heure">Heure</string>
     <string name="app_name">Yevos</string>
+    <string name="num_diebold"># Diebold</string>
+    <string name="num_desj"># Desjardins</string>
+    <string name="nom_tech">Nom Tech</string>
+    <string name="nom_eta">Nom Établissement</string>
+    <string name="module">Module</string>
+    <string name="travail">Travail</string>
+
     <string-array name="compagnies_array">
         <item>CPU</item>
         <item>Compucom</item>
