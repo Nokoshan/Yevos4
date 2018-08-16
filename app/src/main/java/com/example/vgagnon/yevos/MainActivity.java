@@ -11,9 +11,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        if (!isTaskRoot()) {
+            finish();
+            return;
+        }
     }
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (text.equals("Diebold")) {
             Intent intent = new Intent(this, Diebold_Call_In.class);
             startActivity(intent);
+           // finish();
         } else if (text.equals("Maxwell")) {
             text = "Compucom";
         } else if (text.equals("Multitech")) {

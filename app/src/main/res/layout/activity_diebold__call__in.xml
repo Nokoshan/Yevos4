@@ -6,7 +6,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="300dp"
+    android:clipToPadding="false"
+    android:alwaysRetainTaskState="true"
     android:fillViewport="true"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+
+
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -27,7 +33,7 @@
         <EditText
             android:id="@+id/numDiebold"
             android:layout_width="0dp"
-            android:layout_height="37dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
@@ -102,6 +108,7 @@
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:focusableInTouchMode="false"
             android:ems="10"
             android:hint="@string/heure"
             android:inputType="textPersonName"
@@ -127,6 +134,7 @@
             android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/heure"
+            android:focusableInTouchMode="false"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="@+id/heureDepart"
             app:layout_constraintHorizontal_bias="0.0"
@@ -141,6 +149,7 @@
             android:layout_marginTop="16dp"
             android:ems="10"
             android:hint="@string/heure"
+            android:focusableInTouchMode="false"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="@+id/heureDebut"
             app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -167,7 +176,7 @@
         <EditText
             android:id="@+id/nomEta"
             android:layout_width="0dp"
-            android:layout_height="39dp"
+            android:layout_height="43dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
@@ -237,7 +246,7 @@
         <EditText
             android:id="@+id/textTravail"
             android:layout_width="0dp"
-            android:layout_height="247dp"
+            android:layout_height="121dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
@@ -254,10 +263,95 @@
             android:layout_height="27dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/darker_gray"
+            android:entries="@array/type_fermeture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPiece3"
+            tools:textAlignment="center" />
+
+        <Button
+            android:id="@+id/buttonEnvoyer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:onClick="sendEmail"
+            android:text="Envoyer Diebold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:text="Pièces"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textTravail" />
+
+        <EditText
+            android:id="@+id/textPiece1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Pièce #1"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <EditText
+            android:id="@+id/textPiece2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Pièce #2"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPiece1" />
+
+        <EditText
+            android:id="@+id/textPiece3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Pièce #3"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPiece2" />
+
+        <Button
+            android:id="@+id/buttonEnvoyerDesj"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="sendEmailDesj"
+            android:text="Envoyer Desjardins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonEnvoyer" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
