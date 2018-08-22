@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         } else if (text.equals("Maxwell")) {
             text = "Compucom";
         } else if (text.equals("Multitech")) {
-            text = "Compucom";
+            Intent intent = new Intent(this, Multitech_Call_In.class);
+            startActivity(intent);
         } else if (text.equals("MSC")) {
             text = "Compucom";
         } else if (text.equals("NCR")) {

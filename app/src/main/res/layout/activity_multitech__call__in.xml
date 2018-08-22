@@ -12,14 +12,12 @@
     android:alwaysRetainTaskState="true"
     android:fillViewport="true"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
 
-
-
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Diebold_Call_In">
+        tools:context=".Multitech_Call_In">
 
         <TextView
             android:id="@+id/textView2"
@@ -95,7 +93,7 @@
             android:inputType="textPersonName"
             android:textAlignment="center"
             app:layout_constraintStart_toEndOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+            app:layout_constraintTop_toBottomOf="@+id/numDesj" />
 
         <TextView
             android:id="@+id/textView5"
@@ -372,47 +370,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonEnvoyer" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Date"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="134dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name"
-            app:layout_constraintStart_toEndOf="@+id/textView12"
-            app:layout_constraintTop_toBottomOf="@+id/numDesj" />
-
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="154dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Vérifier charte?"
-            app:layout_constraintStart_toEndOf="@+id/editText"
-            app:layout_constraintTop_toBottomOf="@+id/numDesj" />
-
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="0dp"
-            android:layout_height="33dp"
-            android:layout_marginTop="8dp"
-            android:text="Accident/Météo"
-            app:layout_constraintEnd_toEndOf="@+id/checkBox"
-            app:layout_constraintStart_toStartOf="@+id/checkBox"
-            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

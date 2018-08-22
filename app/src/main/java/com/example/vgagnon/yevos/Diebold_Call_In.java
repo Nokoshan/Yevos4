@@ -2,7 +2,7 @@ package com.example.vgagnon.yevos;
 
 import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.icu.util.Calendar;
+//import android.icu.util.Calendar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
+import java.util.Calendar;
 
 public class Diebold_Call_In extends AppCompatActivity {
     EditText time;
@@ -29,6 +30,7 @@ public class Diebold_Call_In extends AppCompatActivity {
         time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Calendar mcurrentTime = Calendar.getInstance();
                 int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
                 int minute = mcurrentTime.get(Calendar.MINUTE);
@@ -36,29 +38,21 @@ public class Diebold_Call_In extends AppCompatActivity {
                 mTimePicker = new TimePickerDialog(Diebold_Call_In.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        if (selectedMinute == 1) {
-                            time.setText(selectedHour + ":01");
-                        } else if (selectedMinute == 2){
-                            time.setText(selectedHour + ":02");
-                        } else if (selectedMinute == 3){
-                            time.setText(selectedHour + ":03");
-                        } else if (selectedMinute == 4){
-                            time.setText(selectedHour + ":04");
-                        } else if (selectedMinute == 5){
-                            time.setText(selectedHour + ":05");
-                        } else if (selectedMinute == 6){
-                            time.setText(selectedHour + ":06");
-                        } else if (selectedMinute == 7){
-                            time.setText(selectedHour + ":07");
-                        } else if (selectedMinute == 8){
-                            time.setText(selectedHour + ":08");
-                        } else if (selectedMinute == 9){
-                            time.setText(selectedHour + ":09");
-                        } else if (selectedMinute == 0){
-                            time.setText(selectedHour + ":00");
-                        } else {
-                            time.setText(selectedHour + ":" + selectedMinute);
+                        if (selectedMinute >= 1 && selectedMinute <= 14) {
+                            selectedMinute = 15;
+                        } else if (selectedMinute >= 16 && selectedMinute <= 29){
+                                selectedMinute = 30;
+                        } else if (selectedMinute >= 31 && selectedMinute <= 44) {
+                            selectedMinute = 45;
+                        } else if (selectedMinute >= 46 && selectedMinute <= 59) {
+                            selectedMinute = 0;
+                            if (selectedHour == 23) {
+                                selectedHour = 0;
+                            } else {
+                                selectedHour = selectedHour + 1;
+                            }
                         }
+                        time.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
@@ -77,29 +71,21 @@ public class Diebold_Call_In extends AppCompatActivity {
                 mTimePicker = new TimePickerDialog(Diebold_Call_In.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        if (selectedMinute == 1) {
-                            time2.setText(selectedHour + ":01");
-                        } else if (selectedMinute == 2){
-                            time2.setText(selectedHour + ":02");
-                        } else if (selectedMinute == 3){
-                            time2.setText(selectedHour + ":03");
-                        } else if (selectedMinute == 4){
-                            time2.setText(selectedHour + ":04");
-                        } else if (selectedMinute == 5){
-                            time2.setText(selectedHour + ":05");
-                        } else if (selectedMinute == 6){
-                            time2.setText(selectedHour + ":06");
-                        } else if (selectedMinute == 7){
-                            time2.setText(selectedHour + ":07");
-                        } else if (selectedMinute == 8){
-                            time2.setText(selectedHour + ":08");
-                        } else if (selectedMinute == 9){
-                            time2.setText(selectedHour + ":09");
-                        } else if (selectedMinute == 0){
-                            time2.setText(selectedHour + ":00");
-                        } else {
-                            time2.setText(selectedHour + ":" + selectedMinute);
+                        if (selectedMinute >= 1 && selectedMinute <= 14) {
+                            selectedMinute = 15;
+                        } else if (selectedMinute >= 16 && selectedMinute <= 29){
+                            selectedMinute = 30;
+                        } else if (selectedMinute >= 31 && selectedMinute <= 44) {
+                            selectedMinute = 45;
+                        } else if (selectedMinute >= 46 && selectedMinute <= 59) {
+                            selectedMinute = 0;
+                            if (selectedHour == 23) {
+                                selectedHour = 0;
+                            } else {
+                                selectedHour = selectedHour + 1;
+                            }
                         }
+                        time2.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
@@ -120,29 +106,21 @@ public class Diebold_Call_In extends AppCompatActivity {
                 mTimePicker = new TimePickerDialog(Diebold_Call_In.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        if (selectedMinute == 1) {
-                            time3.setText(selectedHour + ":01");
-                        } else if (selectedMinute == 2){
-                            time3.setText(selectedHour + ":02");
-                        } else if (selectedMinute == 3){
-                            time3.setText(selectedHour + ":03");
-                        } else if (selectedMinute == 4){
-                            time3.setText(selectedHour + ":04");
-                        } else if (selectedMinute == 5){
-                            time3.setText(selectedHour + ":05");
-                        } else if (selectedMinute == 6){
-                            time3.setText(selectedHour + ":06");
-                        } else if (selectedMinute == 7){
-                            time3.setText(selectedHour + ":07");
-                        } else if (selectedMinute == 8){
-                            time3.setText(selectedHour + ":08");
-                        } else if (selectedMinute == 9){
-                            time3.setText(selectedHour + ":09");
-                        } else if (selectedMinute == 0){
-                            time3.setText(selectedHour + ":00");
-                        } else {
-                            time3.setText(selectedHour + ":" + selectedMinute);
+                        if (selectedMinute >= 1 && selectedMinute <= 14) {
+                            selectedMinute = 15;
+                        } else if (selectedMinute >= 16 && selectedMinute <= 29){
+                            selectedMinute = 30;
+                        } else if (selectedMinute >= 31 && selectedMinute <= 44) {
+                            selectedMinute = 45;
+                        } else if (selectedMinute >= 46 && selectedMinute <= 59) {
+                            selectedMinute = 0;
+                            if (selectedHour == 23) {
+                                selectedHour = 0;
+                            } else {
+                                selectedHour = selectedHour + 1;
+                            }
                         }
+                        time3.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
@@ -163,29 +141,21 @@ public class Diebold_Call_In extends AppCompatActivity {
                 mTimePicker = new TimePickerDialog(Diebold_Call_In.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        if (selectedMinute == 1) {
-                            time4.setText(selectedHour + ":01");
-                        } else if (selectedMinute == 2){
-                            time4.setText(selectedHour + ":02");
-                        } else if (selectedMinute == 3){
-                            time4.setText(selectedHour + ":03");
-                        } else if (selectedMinute == 4){
-                            time4.setText(selectedHour + ":04");
-                        } else if (selectedMinute == 5){
-                            time4.setText(selectedHour + ":05");
-                        } else if (selectedMinute == 6){
-                            time4.setText(selectedHour + ":06");
-                        } else if (selectedMinute == 7){
-                            time4.setText(selectedHour + ":07");
-                        } else if (selectedMinute == 8){
-                            time4.setText(selectedHour + ":08");
-                        } else if (selectedMinute == 9){
-                            time4.setText(selectedHour + ":09");
-                        } else if (selectedMinute == 0){
-                            time4.setText(selectedHour + ":00");
-                        } else {
-                            time4.setText(selectedHour + ":" + selectedMinute);
+                        if (selectedMinute >= 1 && selectedMinute <= 14) {
+                            selectedMinute = 15;
+                        } else if (selectedMinute >= 16 && selectedMinute <= 29){
+                            selectedMinute = 30;
+                        } else if (selectedMinute >= 31 && selectedMinute <= 44) {
+                            selectedMinute = 45;
+                        } else if (selectedMinute >= 46 && selectedMinute <= 59) {
+                            selectedMinute = 0;
+                            if (selectedHour == 23) {
+                                selectedHour = 0;
+                            } else {
+                                selectedHour = selectedHour + 1;
+                            }
                         }
+                        time4.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
@@ -212,8 +182,6 @@ public class Diebold_Call_In extends AppCompatActivity {
         String nomMod = nomModule.getText().toString();
         EditText numDiebold = findViewById(R.id.numDiebold);
         String numDie = numDiebold.getText().toString();
-        EditText numDesjardins = findViewById(R.id.numDesj);
-        String numDesj = numDesjardins.getText().toString();
         EditText textTravail = findViewById(R.id.textTravail);
         String textTra = textTravail.getText().toString();
         EditText textPiece1 = findViewById(R.id.textPiece1);
@@ -251,6 +219,7 @@ public class Diebold_Call_In extends AppCompatActivity {
             body.append("\n\nNom du Tech: " + nomTec);
             body.append("\n\n Text de Fermeture: ");
             body.append("\n" + textTra);
+
             Intent i = new Intent(Intent.ACTION_SEND);
             i.setType("message/rfc822");
             i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"mtl_escalation@dieboldnixdorf.com"});
