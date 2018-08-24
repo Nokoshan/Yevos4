@@ -180,7 +180,7 @@ public class Diebold_Call_In extends AppCompatActivity {
         String heureFi = heureFin.getText().toString();
         EditText nomModule = findViewById(R.id.nomModule);
         String nomMod = nomModule.getText().toString();
-        EditText numDiebold = findViewById(R.id.numDiebold);
+        EditText numDiebold = findViewById(R.id.numMultitech);
         String numDie = numDiebold.getText().toString();
         EditText textTravail = findViewById(R.id.textTravail);
         String textTra = textTravail.getText().toString();
@@ -250,7 +250,7 @@ public class Diebold_Call_In extends AppCompatActivity {
         String text = s.getSelectedItem().toString();
         EditText nomTech = findViewById(R.id.nomTech);
         String nomTec = nomTech.getText().toString();
-        EditText numDesjardins = findViewById(R.id.numDesj);
+        EditText numDesjardins = findViewById(R.id.numIngenico);
         String numDesj = numDesjardins.getText().toString();
         nomTec = nomTec.toUpperCase();
         EditText heureDebut = findViewById(R.id.heureDebut);
