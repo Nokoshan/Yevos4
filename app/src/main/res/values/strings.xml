@@ -38,4 +38,33 @@
         <item>09</item>
         <item>10</item>
     </string-array>
+    <string-array name="multitech_operation">
+        <item>Install</item>
+        <item>Deinstall</item>
+    </string-array>
+    <string-array name="multitech_type">
+        <item>5310 EMV</item>
+        <item>7780 EMV</item>
+        <item>Base 7780</item>
+        <item>Base IWL220</item>
+        <item>Base IWL250</item>
+        <item>Batterie 7780</item>
+        <item>Batterie IWL</item>
+        <item>Chargeur IWL</item>
+        <item>ICM122-ICMP</item>
+        <item>ICT220_M16</item>
+        <item>ICT250_M16</item>
+        <item>IPP320 E404 V2</item>
+        <item>IPP320 E404 V3</item>
+        <item>IPP320 E501 V2</item>
+        <item>IPP320 E501 V3</item>
+        <item>IPP320 T340 V2</item>
+        <item>IPP320 T340 V3</item>
+        <item>IPP320 V501 V2</item>
+        <item>IPP320 V501 V3</item>
+        <item>IWL220_M16</item>
+        <item>IWL220_M32</item>
+        <item>IWL250_M16</item>
+        <item>IWL250_M32</item>
+    </string-array>
 </resources>

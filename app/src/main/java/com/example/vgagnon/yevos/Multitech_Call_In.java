@@ -1,6 +1,8 @@
 package com.example.vgagnon.yevos;
 
+import android.content.DialogInterface;
 import android.graphics.Paint;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,7 +16,7 @@ import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.graphics.Canvas;
 import android.support.v7.widget.helper.ItemTouchHelper;
-
+import android.widget.EditText;
 
 
 public class Multitech_Call_In extends AppCompatActivity {
@@ -27,7 +29,7 @@ public class Multitech_Call_In extends AppCompatActivity {
     private String[] myImageNameList = new String[]{"Benz", "Bike",
             "Car","Carrera"
             ,"Ferrari","Harly",
-            "Lamborghini","Silver"};
+            "Lamborghini","Silver","test","fdsfdsa"};
 
 
 
@@ -35,7 +37,7 @@ public class Multitech_Call_In extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multitech__call__in);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+        recyclerView =  findViewById(R.id.recycler);
 
         imageModelArrayList = populateList();
 
@@ -59,11 +61,11 @@ public class Multitech_Call_In extends AppCompatActivity {
                 int position = viewHolder.getAdapterPosition();
 
                 if (direction == ItemTouchHelper.LEFT){
-                    final Model deletedModel = imageModelArrayList.get(position);
-                    final int deletedPosition = position;
+                 //   final Model deletedModel = imageModelArrayList.get(position);
+                 //   final int deletedPosition = position;
                     adapter.removeItem(position);
                     // showing snack bar with Undo option
-                    Snackbar snackbar = Snackbar.make(getWindow().getDecorView().getRootView(), " removed from Recyclerview!", Snackbar.LENGTH_LONG);
+                  /*  Snackbar snackbar = Snackbar.make(getWindow().getDecorView().getRootView(), " removed from Recyclerview!", Snackbar.LENGTH_LONG);
                     snackbar.setAction("UNDO", new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -72,13 +74,13 @@ public class Multitech_Call_In extends AppCompatActivity {
                         }
                     });
                     snackbar.setActionTextColor(Color.YELLOW);
-                    snackbar.show();
+                    snackbar.show();*/
                 } else {
-                    final Model deletedModel = imageModelArrayList.get(position);
-                    final int deletedPosition = position;
+                  //  final Model deletedModel = imageModelArrayList.get(position);
+                  //  final int deletedPosition = position;
                     adapter.removeItem(position);
                     // showing snack bar with Undo option
-                    Snackbar snackbar = Snackbar.make(getWindow().getDecorView().getRootView(), " removed from Recyclerview!", Snackbar.LENGTH_LONG);
+                  /*  Snackbar snackbar = Snackbar.make(getWindow().getDecorView().getRootView(), " removed from Recyclerview!", Snackbar.LENGTH_LONG);
                     snackbar.setAction("UNDO", new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -88,7 +90,7 @@ public class Multitech_Call_In extends AppCompatActivity {
                         }
                     });
                     snackbar.setActionTextColor(Color.YELLOW);
-                    snackbar.show();
+                    snackbar.show();*/
                 }
             }
 
@@ -103,19 +105,19 @@ public class Multitech_Call_In extends AppCompatActivity {
                     float width = height / 3;
 
                     if(dX > 0){
-                        p.setColor(Color.parseColor("#388E3C"));
+                        p.setColor(Color.parseColor("#D32F2F"));
                         RectF background = new RectF((float) itemView.getLeft(), (float) itemView.getTop(), dX,(float) itemView.getBottom());
                         c.drawRect(background,p);
-                        icon = BitmapFactory.decodeResource(getResources(), R.drawable.delete);
+                        //icon = BitmapFactory.decodeResource(getResources(), R.drawable.delete);
                         RectF icon_dest = new RectF((float) itemView.getLeft() + width ,(float) itemView.getTop() + width,(float) itemView.getLeft()+ 2*width,(float)itemView.getBottom() - width);
-                        c.drawBitmap(icon,null,icon_dest,p);
+                        //c.drawBitmap(icon,null,icon_dest,p);
                     } else {
                         p.setColor(Color.parseColor("#D32F2F"));
                         RectF background = new RectF((float) itemView.getRight() + dX, (float) itemView.getTop(),(float) itemView.getRight(), (float) itemView.getBottom());
                         c.drawRect(background,p);
-                        icon = BitmapFactory.decodeResource(getResources(), R.drawable.delete);
+                        //icon = BitmapFactory.decodeResource(getResources(), R.drawable.delete);
                         RectF icon_dest = new RectF((float) itemView.getRight() - 2*width ,(float) itemView.getTop() + width,(float) itemView.getRight() - width,(float)itemView.getBottom() - width);
-                        c.drawBitmap(icon,null,icon_dest,p);
+                        //c.drawBitmap(icon,null,icon_dest,p);
                     }
                 }
                 super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
@@ -128,8 +130,8 @@ public class Multitech_Call_In extends AppCompatActivity {
     private ArrayList<Model> populateList(){
 
         ArrayList<Model> list = new ArrayList<>();
-
-        for(int i = 0; i < 8; i++){
+        int arrayNum =  myImageNameList.length;
+        for(int i = 0; i < arrayNum; i++){
             Model imageModel = new Model();
             imageModel.setName(myImageNameList[i]);
             list.add(imageModel);
@@ -137,7 +139,32 @@ public class Multitech_Call_In extends AppCompatActivity {
 
         return list;
     }
+    public void ajoutPiece (View view){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
+        alert.setTitle("Pièce");
+        alert.setMessage("Message");
+
+        // Set an EditText view to get user input
+        final EditText input = new EditText(this);
+        alert.setView(input);
+
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String value = input.getText().toString();
+                // Do something with value!
+            }
+        });
+
+        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                // Canceled.
+            }
+        });
+
+        alert.show();
+
+    }
 
 
 }
