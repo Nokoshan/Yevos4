@@ -60,4 +60,12 @@ public class multitechPiece extends AppCompatActivity {
 
 
     }
+
+    public void boutCancel(View view) {
+
+        finish();
+
+
+    }
+
 }
