@@ -1,6 +1,7 @@
 package com.example.vgagnon.yevos;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -38,7 +39,7 @@ public class Multitech_Call_In extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multitech__call__in);
         recyclerView =  findViewById(R.id.recycler);
-
+       // ArrayList<Model> list = new ArrayList<>();
         imageModelArrayList = populateList();
 
         adapter = new Adapter(this,imageModelArrayList);
@@ -48,6 +49,16 @@ public class Multitech_Call_In extends AppCompatActivity {
         enableSwipe();
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+            String textPiece = data.getStringExtra("KEY_RESPONSE");
+            Model imageModel = new Model();
+            imageModel.setName(textPiece);
+            imageModelArrayList.add(imageModel);
+            adapter.notifyItemInserted(imageModelArrayList.size());
+        }
+    }
     private void enableSwipe(){
         ItemTouchHelper.SimpleCallback simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
 
@@ -130,39 +141,18 @@ public class Multitech_Call_In extends AppCompatActivity {
     private ArrayList<Model> populateList(){
 
         ArrayList<Model> list = new ArrayList<>();
-        int arrayNum =  myImageNameList.length;
+       /* int arrayNum =  myImageNameList.length;
         for(int i = 0; i < arrayNum; i++){
             Model imageModel = new Model();
             imageModel.setName(myImageNameList[i]);
             list.add(imageModel);
-        }
+        }*/
 
         return list;
     }
     public void ajoutPiece (View view){
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-        alert.setTitle("Pièce");
-        alert.setMessage("Message");
-
-        // Set an EditText view to get user input
-        final EditText input = new EditText(this);
-        alert.setView(input);
-
-        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-                String value = input.getText().toString();
-                // Do something with value!
-            }
-        });
-
-        alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int whichButton) {
-                // Canceled.
-            }
-        });
-
-        alert.show();
+        Intent intent = new Intent(this, multitechPiece.class);
+        startActivityForResult(intent,1);
 
     }
 

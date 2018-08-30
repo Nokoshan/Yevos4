@@ -19,7 +19,8 @@
         <activity
             android:name=".Diebold_Call_In"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Multitech_Call_In" />
+        <activity android:name=".Multitech_Call_In"
+            android:configChanges="orientation|screenSize"/>
         <activity android:name=".multitechPiece"></activity>
     </application>
 

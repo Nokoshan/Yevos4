@@ -29,6 +29,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         notifyItemRemoved(position);
         notifyItemRangeChanged(position, imageModelArrayList.size());
     }
+
+
     public void restoreItem(Model model, int position) {
         imageModelArrayList.add(position, model);
         // notify item added by position

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:alwaysRetainTaskState="true"
     tools:context=".multitechPiece">
 
     <TextView
@@ -11,15 +12,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="Opération"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinOperation"
         android:layout_width="0dp"
-        android:layout_height="23dp"
+        android:layout_height="44dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -33,20 +34,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="Type"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toTopOf="@+id/spinType" />
 
     <Spinner
-        android:id="@+id/spinner4"
+        android:id="@+id/spinType"
         android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_height="42dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
         android:entries="@array/multitech_type"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/spinner2"
-        app:layout_constraintTop_toTopOf="@+id/textView15" />
+        app:layout_constraintStart_toStartOf="@+id/spinOperation"
+        app:layout_constraintTop_toBottomOf="@+id/spinOperation" />
 
     <TextView
         android:id="@+id/textView16"
@@ -54,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="# Série"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textSerie"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -63,11 +65,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="# Marchand"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textMarchand"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/textSerie"
         android:layout_width="0dp"
         android:layout_height="42dp"
         android:layout_marginEnd="16dp"
@@ -76,11 +78,11 @@
         android:hint="# Série"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/spinner4"
-        app:layout_constraintTop_toBottomOf="@+id/spinner4" />
+        app:layout_constraintStart_toStartOf="@+id/spinType"
+        app:layout_constraintTop_toBottomOf="@+id/spinType" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/textMarchand"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -89,8 +91,8 @@
         android:hint="# Marchand"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintStart_toStartOf="@+id/textSerie"
+        app:layout_constraintTop_toBottomOf="@+id/textSerie" />
 
     <Button
         android:id="@+id/button4"
@@ -98,9 +100,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:onClick="ajoutPiece"
         android:text="Ajouter"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/textMarchand" />
 
     <Button
         android:id="@+id/button5"
@@ -110,5 +113,5 @@
         android:layout_marginTop="32dp"
         android:text="Cancel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/textMarchand" />
 </android.support.constraint.ConstraintLayout>
