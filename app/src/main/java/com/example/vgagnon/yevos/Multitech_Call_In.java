@@ -194,6 +194,7 @@ public class Multitech_Call_In extends AppCompatActivity {
                 mTimePicker.setTitle("Select Time");
                 mTimePicker.show();
 
+
             }
         });
 
@@ -456,6 +457,7 @@ public class Multitech_Call_In extends AppCompatActivity {
         }
         body.append("\n" + txtSigne + "..");
         if (txtTravail.length() != 0){
+            txtTravail = txtTravail.replace("\n", " ");
             body.append("\n" + txtTravail + "..");
         }
 
@@ -503,6 +505,7 @@ public class Multitech_Call_In extends AppCompatActivity {
             heureRet.setVisibility(View.VISIBLE);
         }
     }
+
 
 }
 
