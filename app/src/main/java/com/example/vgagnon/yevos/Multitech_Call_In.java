@@ -465,7 +465,9 @@ public class Multitech_Call_In extends AppCompatActivity {
         i.setType("message/rfc822");
         i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"customerservice@multitechservices.ca"});
         if (txtFerm.equals("Garde soir / fin de semaine")) {
-            i.putExtra(Intent.EXTRA_CC  , new String[]{"service.ca@ingenico.com"});
+            i.putExtra(Intent.EXTRA_CC  , new String[]{"service.ca@ingenico.com", "dispatch1@bureautech.ca"});
+        } else {
+            i.putExtra(Intent.EXTRA_CC  , new String[]{"dispatch1@bureautech.ca"});
         }
         i.putExtra(Intent.EXTRA_SUBJECT, "Fermeture appel " + txtMulti + " " + txtInge);
         i.putExtra(Intent.EXTRA_TEXT   , body.toString());
