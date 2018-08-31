@@ -26,6 +26,10 @@
         <item>Suspend</item>
         <item>Fermeture</item>
     </string-array>
+    <string-array name="garde">
+        <item>Jour de semaine</item>
+        <item>Garde soir / fin de semaine</item>
+    </string-array>
     <string-array name="heures_array">
         <item>01</item>
         <item>02</item>
@@ -70,5 +74,63 @@
         <item>IWL250_M16</item>
         <item>IWL250_M32</item>
         <item>SIM Card</item>
+    </string-array>
+    <string-array name="Multitech_Call">
+        <item>Call</item>
+        <item>Install</item>
+        <item>Deinstall</item>
+    </string-array>
+    <string-array name="Multitech_probleme">
+        <item>A-Aucun probleme sur place</item>
+        <item>B-Probleme alimentation</item>
+        <item>C-Probleme imprimante</item>
+        <item>D-Probleme afficheur</item>
+        <item>E-Probeme signal</item>
+        <item>F-Erreur communication</item>
+        <item>G-Clavier (touche bloque,colle)</item>
+        <item>H-Lecteur carte a puce</item>
+        <item>I-Lecteur sans contact</item>
+        <item>J-Lecteur magnetique</item>
+        <item>K-Hardware attack</item>
+        <item>L-Alert irruption</item>
+        <item>M-Crash info</item>
+        <item>N-Cles de securite</item>
+        <item>O-Erreur PDV</item>
+        <item>P-TRX en double\renversement</item>
+        <item>Q-TPV gele</item>
+        <item>R-Clavier inaccessible</item>
+        <item>S-Equipement endommage</item>
+        <item>T-Usage abusif</item>
+        <item>U-Doublon</item>
+        <item>V-Vole</item>
+        <item>W-Fraude</item>
+        <item>X-Mauvaise version</item>
+        <item>Y-Annule(Bell,Marchand,Etc...)</item>
+    </string-array>
+    <string-array name="Multitech_Action">
+        <item>A-Aucune Action</item>
+        <item>B-Remplacer</item>
+        <item>C-Remplacer(Exige)</item>
+        <item>D-Configurer</item>
+        <item>E-Reparer sur place</item>
+        <item>F-Referer telecom</item>
+        <item>G-Referer electrique</item>
+        <item>H-Referer caisse</item>
+    </string-array>
+    <string-array name="Multitech_Equipement">
+        <item>A-Terminal</item>
+        <item>B-Clavier</item>
+        <item>C-Base</item>
+        <item>D-Cable tel</item>
+        <item>E-Cable ip</item>
+        <item>F-Cable caisse</item>
+        <item>G-Magic box</item>
+        <item>H-Cable clavier ext</item>
+        <item>I-SIM</item>
+        <item>J-Bloc d'alimentation</item>
+        <item>K-Batterie</item>
+        <item>L-Mandarin</item>
+        <item>M-Environnement client</item>
+        <item>N-N/A</item>
     </string-array>
 </resources>

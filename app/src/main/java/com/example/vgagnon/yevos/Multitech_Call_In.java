@@ -19,9 +19,13 @@ import android.graphics.RectF;
 import android.view.View;
 import android.graphics.Canvas;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.widget.AdapterView;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 
 public class Multitech_Call_In extends AppCompatActivity {
@@ -46,12 +50,46 @@ public class Multitech_Call_In extends AppCompatActivity {
     String dateFormat = "MM dd yyyy";
     DatePickerDialog.OnDateSetListener date;
     SimpleDateFormat sdf = new SimpleDateFormat(dateFormat, Locale.GERMAN);
-
+    Spinner spinCode1;
+    Spinner spinCode2;
+    Spinner spinCode3;
+    Spinner spinCode4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multitech__call__in);
+
+        spinCode1 = findViewById(R.id.spinCode1);
+        spinCode2 = findViewById(R.id.spinCode2);
+        spinCode3 = findViewById(R.id.spinCode3);
+        spinCode4 = findViewById(R.id.spinCode4);
+
+        spinCode1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String text = spinCode1.getSelectedItem().toString();
+                if (text.equals("Call")){
+                    spinCode2.setVisibility(View.VISIBLE);
+                    spinCode3.setVisibility(View.VISIBLE);
+                    spinCode4.setVisibility(View.VISIBLE);
+                } else {
+                    spinCode2.setVisibility(View.INVISIBLE);
+                    spinCode3.setVisibility(View.INVISIBLE);
+                    spinCode4.setVisibility(View.INVISIBLE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                spinCode2.setVisibility(View.INVISIBLE);
+                spinCode3.setVisibility(View.INVISIBLE);
+                spinCode4.setVisibility(View.INVISIBLE);
+            }
+
+        });
+
+
 
         //  initiate the edit text
         time = findViewById(R.id.heureDepart);
@@ -359,8 +397,112 @@ public class Multitech_Call_In extends AppCompatActivity {
 
     }
 
+    public void sendEmail(View view) {
+        Spinner spinCode1 = findViewById(R.id.spinCode1);
+        String txtCode1 = spinCode1.getSelectedItem().toString();
+        Spinner spinCode2 = findViewById(R.id.spinCode2);
+        String txtCode2 = spinCode2.getSelectedItem().toString();
+        Spinner spinCode3 = findViewById(R.id.spinCode3);
+        String txtCode3 = spinCode3.getSelectedItem().toString();
+        Spinner spinCode4 = findViewById(R.id.spinCode4);
+        String txtCode4 = spinCode4.getSelectedItem().toString();
 
+        EditText Date = findViewById(R.id.textDate);
+        String txtDate = Date.getText().toString();
+        EditText heureDebut = findViewById(R.id.heureDebut);
+        String txtDebut = heureDebut.getText().toString();
+        EditText heureFin = findViewById(R.id.heureFin);
+        String txtFin = heureFin.getText().toString();
 
+        EditText Resume = findViewById(R.id.textResume);
+        String txtResume = Resume.getText().toString();
+        EditText Travail = findViewById(R.id.textTravail);
+        String txtTravail = Travail.getText().toString();
+
+        EditText numMulti = findViewById(R.id.numMultitech);
+        String txtMulti = numMulti.getText().toString();
+        EditText numInge = findViewById(R.id.numIngenico);
+        String txtInge = numInge.getText().toString();
+        EditText textSigne = findViewById(R.id.testSigne);
+        String txtSigne = textSigne.getText().toString();
+
+        Spinner spinFerm = findViewById(R.id.spinFermeture);
+        String txtFerm = spinFerm.getSelectedItem().toString();
+
+        int i3;
+        i3 = imageModelArrayList.size();
+
+        StringBuilder body = new StringBuilder();
+        body.append(txtDate + "..");
+        body.append("\nIn " + txtDebut);
+        body.append(" Out " + txtFin + "..");
+        body.append("\n" + txtResume + "..");
+       if (i3 > 0) {
+            for(int i2=0; i2<i3 ; i2++){
+                body.append("\n" + imageModelArrayList.get(i2).getName());
+                body.append("..");
+            }
+
+        }
+        if (txtCode1.equals("Call")){
+            body.append("\n" + txtCode1.substring(0,1));
+            if (spinCode2.getVisibility() == View.VISIBLE){
+                body.append(txtCode2.substring(0,1));
+                body.append(txtCode3.substring(0,1));
+                body.append(txtCode4.substring(0,1) + "..");
+            }
+        } else {
+           body.append("\n..");
+        }
+        body.append("\n" + txtSigne + "..");
+        if (txtTravail.length() != 0){
+            body.append("\n" + txtTravail + "..");
+        }
+
+        Intent i = new Intent(Intent.ACTION_SEND);
+        i.setType("message/rfc822");
+        i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"customerservice@multitechservices.ca"});
+        if (txtFerm.equals("Garde soir / fin de semaine")) {
+            i.putExtra(Intent.EXTRA_CC  , new String[]{"service.ca@ingenico.com"});
+        }
+        i.putExtra(Intent.EXTRA_SUBJECT, "Fermeture appel " + txtMulti + " " + txtInge);
+        i.putExtra(Intent.EXTRA_TEXT   , body.toString());
+        try {
+            startActivity(Intent.createChooser(i, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(Multitech_Call_In.this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+    public void cacherMontrer (View view){
+        EditText nomTech = findViewById(R.id.nomTech);
+        EditText nomEta = findViewById(R.id.nomEta);
+        EditText heureDepart = findViewById(R.id.heureDepart);
+        EditText heureRetour = findViewById(R.id.heureRetour);
+        TextView nomTec = findViewById(R.id.textView9);
+        TextView nomEt = findViewById(R.id.textView8);
+        TextView heureDep = findViewById(R.id.textView4);
+        TextView heureRet = findViewById(R.id.textView7);
+        if (nomTech.getVisibility() == View.VISIBLE) {
+            nomTech.setVisibility(View.INVISIBLE);
+            nomEta.setVisibility(View.INVISIBLE);
+            heureDepart.setVisibility(View.INVISIBLE);
+            heureRetour.setVisibility(View.INVISIBLE);
+            nomTec.setVisibility(View.INVISIBLE);
+            nomEt.setVisibility(View.INVISIBLE);
+            heureDep.setVisibility(View.INVISIBLE);
+            heureRet.setVisibility(View.INVISIBLE);
+        } else {
+            nomTech.setVisibility(View.VISIBLE);
+            nomEta.setVisibility(View.VISIBLE);
+            heureDepart.setVisibility(View.VISIBLE);
+            heureRetour.setVisibility(View.VISIBLE);
+            nomTec.setVisibility(View.VISIBLE);
+            nomEt.setVisibility(View.VISIBLE);
+            heureDep.setVisibility(View.VISIBLE);
+            heureRet.setVisibility(View.VISIBLE);
+        }
+    }
 
 }
 

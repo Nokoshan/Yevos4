@@ -37,6 +37,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
         notifyItemInserted(position);
     }
 
+    public Model getItem(int position) {
+        return imageModelArrayList.get(position);
+    }
+
+
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 

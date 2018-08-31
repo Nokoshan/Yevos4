@@ -18,6 +18,17 @@
         android:layout_height="match_parent"
         tools:context=".Multitech_Call_In">
 
+        <Spinner
+            android:id="@+id/spinCode1"
+            android:layout_width="80dp"
+            android:background="@drawable/shape"
+            android:layout_height="37dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:entries="@array/Multitech_Call"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="87dp"
@@ -36,7 +47,7 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/shape"
             android:ems="10"
-            android:hint="@string/num_diebold"
+            android:hint="# Multitech"
             android:inputType="textPersonName"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +73,7 @@
             android:layout_marginTop="12dp"
             android:background="@drawable/shape"
             android:ems="10"
-            android:hint="@string/num_desj"
+            android:hint="# Ingenico"
             android:inputType="textPersonName"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -214,20 +225,21 @@
             android:inputType="textPersonName"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/textView9"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/button6" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Module"
-            app:layout_constraintBaseline_toBaselineOf="@+id/nomModule"
+            android:text="Résumé"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textResume"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
-            android:id="@+id/nomModule"
+            android:id="@+id/textResume"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -235,7 +247,7 @@
             android:layout_marginTop="24dp"
             android:background="@drawable/shape"
             android:ems="10"
-            android:hint="@string/module"
+            android:hint="Résumé (changer ICT250)"
             android:inputType="textPersonName"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -245,43 +257,43 @@
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="55dp"
+            android:layout_height="24dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="Travail"
+            android:text="Info Sup"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nomModule" />
+            app:layout_constraintTop_toBottomOf="@+id/textResume" />
 
         <EditText
             android:id="@+id/textTravail"
             android:layout_width="0dp"
-            android:layout_height="121dp"
+            android:layout_height="79dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/shape"
             android:ems="10"
-            android:hint="@string/travail"
+            android:hint="Information Supplémentaire (nom de la personne contactée chez Bell, etc)"
             android:inputType="textMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView11"
-            app:layout_constraintTop_toBottomOf="@+id/nomModule" />
+            app:layout_constraintTop_toBottomOf="@+id/textResume" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/spinFermeture"
             android:layout_width="0dp"
             android:layout_height="27dp"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
 
+            android:layout_marginTop="24dp"
             android:background="@drawable/shape"
-            android:entries="@array/type_fermeture"
+            android:entries="@array/garde"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/spinCode2"
             tools:textAlignment="center" />
 
         <Button
@@ -292,11 +304,11 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:onClick="sendEmail"
-            android:text="Envoyer Diebold"
+            android:text="Envoyer Courriel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+            app:layout_constraintTop_toBottomOf="@+id/spinFermeture" />
 
         <TextView
             android:id="@+id/textView13"
@@ -307,21 +319,9 @@
             android:layout_marginTop="16dp"
             android:text="Pièces"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textTravail" />
-
-        <Button
-            android:id="@+id/buttonEnvoyerDesj"
-            android:layout_width="0dp"
-            android:layout_height="47dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:onClick="sendEmailDesj"
-            android:text="Envoyer Desjardins"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonEnvoyer" />
+            app:layout_constraintTop_toBottomOf="@+id/testSigne" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler"
@@ -330,6 +330,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:background="@drawable/shape"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -374,6 +375,91 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView18"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Nom signé"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTravail" />
+
+        <EditText
+            android:id="@+id/testSigne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:hint="Signature"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView19"
+            app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Code de fermeture"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+        <Spinner
+            android:id="@+id/spinCode2"
+            android:layout_width="80dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape"
+            android:entries="@array/Multitech_probleme"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/spinCode1"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <Spinner
+            android:id="@+id/spinCode3"
+            android:layout_width="80dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape"
+            android:entries="@array/Multitech_Action"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/spinCode2"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <Spinner
+            android:id="@+id/spinCode4"
+            android:layout_width="84dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape"
+            android:entries="@array/Multitech_Equipement"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/spinCode3"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:onClick="cacherMontrer"
+            android:text="Cacher / montrer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

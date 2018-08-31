@@ -166,7 +166,7 @@ public class Diebold_Call_In extends AppCompatActivity {
 
     }
     public void sendEmail(View view) {
-        Spinner s = findViewById(R.id.spinner3);
+        Spinner s = findViewById(R.id.spinFermeture);
         String text = s.getSelectedItem().toString();
         EditText nomClient = findViewById(R.id.nomEta);
         String nomCli = nomClient.getText().toString();
@@ -178,7 +178,7 @@ public class Diebold_Call_In extends AppCompatActivity {
         String heureDeb = heureDebut.getText().toString();
         EditText heureFin = findViewById(R.id.heureFin);
         String heureFi = heureFin.getText().toString();
-        EditText nomModule = findViewById(R.id.nomModule);
+        EditText nomModule = findViewById(R.id.textResume);
         String nomMod = nomModule.getText().toString();
         EditText numDiebold = findViewById(R.id.numMultitech);
         String numDie = numDiebold.getText().toString();
@@ -246,7 +246,7 @@ public class Diebold_Call_In extends AppCompatActivity {
         }
     }
     public void sendEmailDesj(View view) {
-        Spinner s = findViewById(R.id.spinner3);
+        Spinner s = findViewById(R.id.spinFermeture);
         String text = s.getSelectedItem().toString();
         EditText nomTech = findViewById(R.id.nomTech);
         String nomTec = nomTech.getText().toString();
