@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.vgagnon.yevos.Multitech_Call_In">
+    <item
+        android:id="@+id/aideMultitech"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:orderInCategory="0"
+        android:title="Aide Mémoire"
+        app:showAsAction="always" />
+</menu>

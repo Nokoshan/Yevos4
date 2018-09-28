@@ -41,10 +41,11 @@ public class multitechPiece extends AppCompatActivity {
             textOperation = "P";
         }
 
-        if (textMarchand.substring(0,1).equals("B")){
-            textMarchand = textMarchand.substring(1);
+        if (textMarchand.length() > 0){
+            if (textMarchand.substring(0,1).equals("B")){
+                textMarchand = textMarchand.substring(1);
+            }
         }
-
         if (textMarchand.length() == 6) {
             textMarchand = textMarchand + "00";
         }

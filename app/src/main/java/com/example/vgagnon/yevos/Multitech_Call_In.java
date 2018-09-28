@@ -16,6 +16,8 @@ import java.util.Locale;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.RectF;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.graphics.Canvas;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -42,6 +44,32 @@ public class Multitech_Call_In extends AppCompatActivity {
             "Car","Carrera"
             ,"Ferrari","Harly",
             "Lamborghini","Silver","test","fdsfdsa"};
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_multitech_call_in, menu);
+        return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.aideMultitech) {
+            Intent intent = new Intent(Multitech_Call_In.this, AideMemoireMultitech.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
 
     Context context = this;
@@ -120,7 +148,7 @@ public class Multitech_Call_In extends AppCompatActivity {
                                 selectedHour = selectedHour + 1;
                             }
                         }
-                        time.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
+                        time.setText(String.format("%02d %02d", selectedHour, selectedMinute));
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
@@ -153,7 +181,7 @@ public class Multitech_Call_In extends AppCompatActivity {
                                 selectedHour = selectedHour + 1;
                             }
                         }
-                        time2.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
+                        time2.setText(String.format("%02d %02d", selectedHour, selectedMinute));
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
@@ -188,7 +216,7 @@ public class Multitech_Call_In extends AppCompatActivity {
                                 selectedHour = selectedHour + 1;
                             }
                         }
-                        time3.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
+                        time3.setText(String.format("%02d %02d", selectedHour, selectedMinute));
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
@@ -224,7 +252,7 @@ public class Multitech_Call_In extends AppCompatActivity {
                                 selectedHour = selectedHour + 1;
                             }
                         }
-                        time4.setText(String.format("%02d:%02d", selectedHour, selectedMinute));
+                        time4.setText(String.format("%02d %02d", selectedHour, selectedMinute));
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");
@@ -249,7 +277,7 @@ public class Multitech_Call_In extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear,
                                   int dayOfMonth) {
-                // TODO Auto-generated method stub
+
                 myCalendar.set(Calendar.YEAR, year);
                 myCalendar.set(Calendar.MONTH, monthOfYear);
                 myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);

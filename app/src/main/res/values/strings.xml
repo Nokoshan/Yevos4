@@ -61,14 +61,8 @@
         <item>ICT220_M32</item>
         <item>ICT250_M16</item>
         <item>ICT250_M32</item>
-        <item>IPP320 E404 V2</item>
-        <item>IPP320 E404 V3</item>
-        <item>IPP320 E501 V2</item>
-        <item>IPP320 E501 V3</item>
-        <item>IPP320 T340 V2</item>
-        <item>IPP320 T340 V3</item>
-        <item>IPP320 V501 V2</item>
-        <item>IPP320 V501 V3</item>
+        <item>IPP320_V2</item>
+        <item>IPP320_V3</item>
         <item>IWL220_M16</item>
         <item>IWL220_M32</item>
         <item>IWL250_M16</item>
@@ -133,4 +127,197 @@
         <item>M-Environnement client</item>
         <item>N-N/A</item>
     </string-array>
+    <string name="title_activity_aide_memoire_diebold">Aide Memoire Diebold</string>
+    <string name="aidememoireDiebold">
+        "<b><u>Réception</u></b>\nConfirmer par courriel et donner ETA"
+        "\n\nGrand-Remous et Messines ont besoin de la sécurité, faire la demande par téléphone au 1-888-877-8866 opt. 1 et 5"
+        "\n\n\n<b><u>Bon de travail</u></b>\n"
+        "Pad Diebold avec le bavard Bureautech."
+        "\n\n\n<b><u>Call in</u></b>\n"
+        "Appeler le 1-888-877-8866 opt. 1 et 5 pour donner l’heure d’arrivée."
+        "\n\n<b><font color="red">****** </font></b>Si l’appel est un « first line » et que vous devez prendre plus de 45 minutes pour régler le problème, il faut fermer l’appel avec Diebold et Desjardins et faire ouvrir un « second line » au 1-855-201-4371.<b><font color="red"> ******</font></b>"
+        "\n\n\n<b><u>Support</u></b>\n"
+        "Appeler le centre d’appels Diebold et demandez à parler à un support technique au 1-888-877-8866 opt 1 et 5"
+        "\n\n\n<b><u>Commande de pièces</u></b>\n"
+        "Les commandes de pièces se font par courriel avec partscanada@dieboldnixdorf.com (il est mieux de valider la pièce avec un support technique)."
+        "\n\n\n<b><u>Call out et fermeture</u></b>\n"
+        "Envoyer courriel à fermeture_tech.gm@desjardins.com et MTL_Escalation@dieboldnixdorf.com mettre en copie dispatch1@bureautech.ca et Donner numéro de pointeur de Desjardins"
+        "\n\n\n<b><u>Varia</u></b>\n"
+        "090 4319"
+        "\n\n212 - Mani"
+        "\n380 - Madone"
+        "\n381 - Boulevard"
+        "\n382 - L-d-É"
+        "\n383 - Barrette"
+        "\n384 - N-d-Laus"
+        "\n\n\n\n\n\n\n"
+    </string>
+    <string name="aidememoireMultitech">
+        "<b><u>Réception</u></b>\nConfirmer par courriel et donner ETA"
+        "\nEnvoyer un eta à Service.ca@ingenico.com et mettre en copie customerservice@multitechservices.ca ainsi que dispatch1@bureautech.ca"
+        "\n\n\n<b><u>Bon de travail</u></b>\n"
+        "Bon de travail MULTITECH."
+        "\n\n<b><font color="red">****** </font></b>Si vous dépassez 30 Minutes, il est très important de contacté Bell Desjardins pour les informés de votre problème et de noter le nom et l’heure de la personne avec qui vous avez parlé et il faut le faire si nécessaire a <font color="red"><u>chaque 30 minutes</u></font> sinon nous ne serons pas payer pour le dépassement de temps.<b><font color="red"> ******</font></b>"
+        "\n\nTous les équipements DOA doivent être validé par Agope au téléphone en le contactant au 1-800-363-3356 option 3."
+        "\n\nSi vous ne pouvez pas compléter votre appel, il faut faire une mise à jour pour avertir que nous allons revenir pour finaliser l’appel."
+        "\n\n\n<b><u>Call in</u></b>\n"
+        "Aucun Call in nécessaire pour ce sous-traitant."
+        "\n\n\n<b><u>Support</u></b>\n"
+        "Agob au 1-800-363-3356 option 3"
+        "\n\n\n<b><u>Call out et fermeture</u></b>\n"
+        "Envoyer la fermeture par courriel directement avec le téléphone de garde à Service.ca@ingenico.com et mettre en copie customerservice@multitechservices.ca ainsi que dispatch1@bureautech.ca"
+        "\n\n\n<b><u>Varia</u></b>\n"
+        "\nCode Technicien - CDTC"
+        "\nCode Autonome IPP320 pour accès aux menus - Bouton Jaune et ensuite 0"
+        "\n\nFaire attention adresse IP et Port du comm PDV pour les IWL220"
+        "\n\nAlert Irruption = changer automatiquement la batterie et le TPV"
+        "\n\nICT250 en Dial Up, préparer en atelier ou s'assurer que le flag du téléchargement n'est pas mis avec Bell"
+        "\n\n\n\n\n\n\n\n\n"
+    </string>
+    <string name="aidememoireCPU">
+        "<b><u>Réception</u></b>\nConfirmer par courriel et donner ETA"
+        "\nLes appels de Tremblants sont hors de notre zone mais on les fait si ça n'impacte pas le reste de la garde"
+        "\n\n\n<b><u>Bon de travail</u></b>\n"
+        "\nBon de travail CPU envoyé par courriel à imprimer au bureau. Ne pas oublier de remplir le Bavard Bureautech"
+        "\n\n<b><font color="red">****** </font></b>Si déploiement ou nouvelles installations Tellus, il faut prendre pad (sur étagère bon de travail dispatch) et remplir en plus du bon de travail. Il faut envoyer le bon de travail à BONTELUS@CPU.CA une fois l’appel finalisé.<b><font color="red"> ******</font></b>"
+        "\n\n\n<b><u>Call in</u></b>\n"
+        "\nPar l'intranet de CPU."
+        "\nGénéral : https://intranet.cpu.qc.ca/intranet/stcpu/"
+        "\nJean-Coutu : https://intranet.cpu.qc.ca/intranet/pjc/"
+        "\n\nUser : bureautech laurentides - Password : 974BUR265"
+        "\n\nMcDonald : intranet CPU + Road Warrior Fujitsu : "
+        "\n\n\n<b><u>Support</u></b>\n"
+        "\nTelus = CPU 1-888-681-6974 Option 777"
+        "\nAutre contrat CPU = 1-888-681-6974 Option 888"
+        "\nSAQ = Centre OTIS 1-514-254-2848"
+        "\nDesjardins Assurances = Sébastien au 1-514-281-7000 poste 5552225 (cell = 1-514-588-4650)."
+        "\n\n\n<b><u>Call out et fermeture</u></b>\n"
+        "\nIntranet de CPU comme pour le Call In"
+        "\n\nMcDonald ne pas oublier de le faire dans Road Warrior également"
+        "\n\n\n\n\n\n\n\n\n"
+    </string>
+    <string name="aidememoireCompucom">
+        "<b><u>Réception</u></b>\nConfirmer par courriel et donner ETA"
+        "\n\n\n<b><u>Bon de travail</u></b>\n"
+        "\nBon de travail COMPUCOM avec le Bavard Bureautech"
+        "\n\n\n<b><u>Call in</u></b>\n"
+        "\nPendant les heures de bureau, appeler le dispatch Bureautech."
+        "\nN.B. : On n’en fait pas pour ce sous-traitant le soir et les fins de semaine."
+        "\n\n\n<b><u>Support</u></b>\n"
+        "\nYves Baillargeon = 1-800-268-4867 poste 78851  / EN dehors des heures de bureau = 1-800-668-6574"
+        "\nShell = 1-416-456-5710"
+        "\n\n\n<b><u>Call out et fermeture</u></b>\n"
+        "\nPendant les heures de bureau, appeler le dispatch Bureautech."
+        "\nLe soir et les fins de semaine on ferme l’appel avec le support technique.  Ou par courriel à quebecsubscanada@compucom.com et mettre dispatch1@bureautech.ca  en copie indiquer dans votre message que le document de fermeture est a suivre."
+        "\n(Noter le nom de la personne sur votre Bavard Bureautech)."
+        "\n\n\n\n\n\n\n\n\n"
+    </string>
+    <string name="aidememoireCompugen">
+        "<b><u>Réception</u></b>\nConfirmer par courriel et donner ETA"
+        "\n\n\n<b><u>Bon de travail</u></b>\n"
+        "\nBon de travail COMPUCOM avec le Bavard Bureautech"
+        "\n\n\n<b><u>Call in</u></b>\n"
+        "\nPendant les heures de bureau, appeler le dispatch Bureautech."
+        "\nN.B. : On n’en fait pas pour ce sous-traitant le soir et les fins de semaine."
+        "\n\n\n<b><u>Support</u></b>\n"
+        "\nYves Baillargeon = 1-800-268-4867 poste 78851  / EN dehors des heures de bureau = 1-800-668-6574"
+        "\nShell = 1-416-456-5710"
+        "\n\n\n<b><u>Call out et fermeture</u></b>\n"
+        "\nPendant les heures de bureau, appeler le dispatch Bureautech."
+        "\nLe soir et les fins de semaine on ferme l’appel avec le support technique.  Ou par courriel à quebecsubscanada@compucom.com et mettre dispatch1@bureautech.ca  en copie indiquer dans votre message que le document de fermeture est a suivre."
+        "\n(Noter le nom de la personne sur votre Bavard Bureautech)."
+        "\n\n\n\n\n\n\n\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_aide_memoire_multitech">Aide Memoire Multitech</string>
+    <string name="title_activity_aide_memoire_cpu">Aide Memoire CPU</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
 </resources>

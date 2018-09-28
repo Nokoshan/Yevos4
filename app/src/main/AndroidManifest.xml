@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.vgagnon.yevos">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,10 +20,25 @@
         </activity>
         <activity
             android:name=".Diebold_Call_In"
+            android:label="Diebold"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Multitech_Call_In"
-            android:configChanges="orientation|screenSize"/>
-        <activity android:name=".multitechPiece"></activity>
+        <activity
+            android:name=".Multitech_Call_In"
+            android:configChanges="orientation|screenSize"
+            android:label="Multitech" />
+        <activity android:name=".multitechPiece" />
+        <activity
+            android:name=".AideMemoireDiebold"
+            android:label="@string/title_activity_aide_memoire_diebold"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AideMemoireMultitech"
+            android:label="@string/title_activity_aide_memoire_multitech"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AideMemoireCPU"
+            android:label="@string/title_activity_aide_memoire_cpu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

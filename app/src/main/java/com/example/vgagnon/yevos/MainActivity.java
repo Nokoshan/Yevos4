@@ -48,4 +48,35 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void AideMemoire(View view) {
+        Spinner s = findViewById(R.id.spinner);
+        String text = s.getSelectedItem().toString();
+        if (text.equals("CPU")) {
+            Intent intent = new Intent(this, AideMemoireCPU.class);
+            startActivity(intent);
+        } else if (text.equals("Compucom")) {
+            text = "Compucom";
+        } else if (text.equals("Compugen")) {
+            text = "Compucom";
+        } else if (text.equals("Diebold")) {
+            Intent intent = new Intent(this, AideMemoireDiebold.class);
+            startActivity(intent);
+        } else if (text.equals("Maxwell")) {
+            text = "Compucom";
+        } else if (text.equals("Multitech")) {
+            Intent intent = new Intent(this, AideMemoireMultitech.class);
+            startActivity(intent);
+        } else if (text.equals("MSC")) {
+            text = "Compucom";
+        } else if (text.equals("NCR")) {
+            text = "Compucom";
+        } else if (text.equals("Progitech")) {
+            text = "Compucom";
+        } else if (text.equals("Ricoh")) {
+            text = "Compucom";
+        }
+    }
+
+
+
 }
