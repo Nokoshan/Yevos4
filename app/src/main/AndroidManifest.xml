@@ -38,6 +38,34 @@
         <activity
             android:name=".AideMemoireCPU"
             android:label="@string/title_activity_aide_memoire_cpu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AideMemoireCompucom"
+            android:label="@string/title_activity_aide_memoire_compucom"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AideMemoireCompugen"
+            android:label="@string/title_activity_aide_memoire_compugen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AideMemoireMaxwell"
+            android:label="@string/title_activity_aide_memoire_maxwell"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AideMemoireMSC"
+            android:label="@string/title_activity_aide_memoire_msc"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AideMemoireNCR"
+            android:label="@string/title_activity_aide_memoire_ncr"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AideMemoireProgitech"
+            android:label="@string/title_activity_aide_memoire_progitech"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AideMemoireRicoh"
+            android:label="@string/title_activity_aide_memoire_ricoh"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

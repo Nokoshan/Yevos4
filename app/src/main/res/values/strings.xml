@@ -121,7 +121,7 @@
         <item>G-Magic box</item>
         <item>H-Cable clavier ext</item>
         <item>I-SIM</item>
-        <item>J-Bloc d'alimentation</item>
+        <item>J-Bloc d\'alimentation</item>
         <item>K-Batterie</item>
         <item>L-Mandarin</item>
         <item>M-Environnement client</item>
@@ -135,9 +135,11 @@
         "Pad Diebold avec le bavard Bureautech."
         "\n\n\n<b><u>Call in</u></b>\n"
         "Appeler le 1-888-877-8866 opt. 1 et 5 pour donner l’heure d’arrivée."
-        "\n\n<b><font color="red">****** </font></b>Si l’appel est un « first line » et que vous devez prendre plus de 45 minutes pour régler le problème, il faut fermer l’appel avec Diebold et Desjardins et faire ouvrir un « second line » au 1-855-201-4371.<b><font color="red"> ******</font></b>"
+        "\n\n<b><font color="red">****** </font></b>Si l’appel est un « first line » et que vous devez prendre plus de 45 minutes pour régler le problème, il faut fermer l’appel avec Diebold SEULEMENT et faire ouvrir un « second line » au 1-855-201-4371.<b><font color="red"> ******</font></b>"
         "\n\n\n<b><u>Support</u></b>\n"
         "Appeler le centre d’appels Diebold et demandez à parler à un support technique au 1-888-877-8866 opt 1 et 5"
+        "\nOpteva : Marcel Samson - 514-292-4584 ou Pascal R - 514-292-4843"
+        "\nWincor : Martin Lefebvre - 514-238-0470 ou Kenny - 514-248-4312"
         "\n\n\n<b><u>Commande de pièces</u></b>\n"
         "Les commandes de pièces se font par courriel avec partscanada@dieboldnixdorf.com (il est mieux de valider la pièce avec un support technique)."
         "\n\n\n<b><u>Call out et fermeture</u></b>\n"
@@ -171,22 +173,22 @@
         "\nCode Autonome IPP320 pour accès aux menus - Bouton Jaune et ensuite 0"
         "\n\nFaire attention adresse IP et Port du comm PDV pour les IWL220"
         "\n\nAlert Irruption = changer automatiquement la batterie et le TPV"
-        "\n\nICT250 en Dial Up, préparer en atelier ou s'assurer que le flag du téléchargement n'est pas mis avec Bell"
+        "\n\nICT250 en Dial Up, préparer en atelier ou s\'assurer que le flag du téléchargement n\'est pas mis avec Bell"
         "\n\n\n\n\n\n\n\n\n"
     </string>
     <string name="aidememoireCPU">
         "<b><u>Réception</u></b>\nConfirmer par courriel et donner ETA"
-        "\nLes appels de Tremblants sont hors de notre zone mais on les fait si ça n'impacte pas le reste de la garde"
+        "\nLes appels de Tremblants sont hors de notre zone mais on les fait si ça n\'impacte pas le reste de la garde"
         "\n\n\n<b><u>Bon de travail</u></b>\n"
         "\nBon de travail CPU envoyé par courriel à imprimer au bureau. Ne pas oublier de remplir le Bavard Bureautech"
         "\n\n<b><font color="red">****** </font></b>Si déploiement ou nouvelles installations Tellus, il faut prendre pad (sur étagère bon de travail dispatch) et remplir en plus du bon de travail. Il faut envoyer le bon de travail à BONTELUS@CPU.CA une fois l’appel finalisé.<b><font color="red"> ******</font></b>"
         "\n\n\n<b><u>Call in</u></b>\n"
-        "\nPar l'intranet de CPU."
+        "\nPar l\'intranet de CPU."
         "\nGénéral : https://intranet.cpu.qc.ca/intranet/stcpu/"
         "\nJean-Coutu : https://intranet.cpu.qc.ca/intranet/pjc/"
         "\nUser : bureautech laurentides - Password : 974BUR265"
         "\n\nMcDonald : intranet CPU + Road Warrior Fujitsu : https://iportal.shopfujitsu.com/portal/page/portal/RoadWarrior/Login"
-        "\nLogin : inclus dans l'appel Fujitsu (ex: cpuottawa1@cpu.ca   Password : welcome1"
+        "\nLogin : inclus dans l\'appel Fujitsu (ex: cpuottawa1@cpu.ca   Password : welcome1"
         "\n\n\n<b><u>Support</u></b>\n"
         "\nTelus = CPU 1-888-681-6974 Option 777"
         "\nAutre contrat CPU = 1-888-681-6974 Option 888"
@@ -205,7 +207,7 @@
         "\nPendant les heures de bureau, appeler le dispatch Bureautech."
         "\nN.B. : On n’en fait pas pour ce sous-traitant le soir et les fins de semaine."
         "\n\n\n<b><u>Support</u></b>\n"
-        "\nYves Baillargeon = 1-800-268-4867 poste 78851  / EN dehors des heures de bureau = 1-800-668-6574"
+        "\nYves Baillargeon = 1-800-268-4867 poste 78820  / EN dehors des heures de bureau = 1-800-668-6574"
         "\nShell = 1-416-456-5710"
         "\n\n\n<b><u>Call out et fermeture</u></b>\n"
         "\nPendant les heures de bureau, appeler le dispatch Bureautech."
@@ -217,7 +219,7 @@
         "<b><u>Réception</u></b>\nPar courriel + confirmation sur cellulaire du technicien de garde le soir et les fins de semaine"
         "\n(noter le nom de la personne sur votre Bavard Bureautech)."
         "\n\nPetro Canada =Envoyé un ETA à DutyManagers pour qu’ils soient au courant 1-888-362-8302 Opt 1 (24Hrs).!"
-        "\n\n"Pour les autres clients cela n’est pas nécessaire de fournir un eta."
+        "\n\nPour les autres clients cela n’est pas nécessaire de fournir un eta."
         "\nLe soir et les fins de semaines le technicien doit faire ces updates sur l’intranet de COMPUGEN"
         "\n\nintrantet Compugen = https://emerge.compugen.com/emerge/tarupdate"
         "\nLogin = V-BUREAU  mot de passe = password) ."
@@ -269,7 +271,6 @@
         "\n\n\n<b><u>Support</u></b>\n"
         "\nPM LOTO / LOTO / MSC = 1-800-265-7873"
         "\nLoto-Québec (ligne d’urgence) = 1-800-361-8267"
-        "\nIOL = 1-800-268-7107"
         "\nFAPAQ = 1-877-341-8293 Option 1 puis 2"
         "\n\n\n<b><u>Call out et fermeture</u></b>\n"
         "\nFermeture de l’appel sur site par téléphone avec MSC au 1-800-265-7873."
@@ -277,7 +278,7 @@
     </string>
     <string name="aidememoireNCR">
         "<b><u>Réception</u></b>\nPar courriel + confirmation sur cellulaire du technicien de garde le soir et les fins de semaine."
-        "\nN.B. : Il faut donner un ETA pour l’appel ainsi qu'assigner un technicien et notez le nom de la personne qui appelle sur le cellulaire et demander à changer le statut de votre appel en DS car si vous allez sur place et qu’il est annulé entre-temps on ne sera pas payé."
+        "\nN.B. : Il faut donner un ETA pour l’appel ainsi qu\'assigner un technicien et notez le nom de la personne qui appelle sur le cellulaire et demander à changer le statut de votre appel en DS car si vous allez sur place et qu’il est annulé entre-temps on ne sera pas payé."
         "\n\n\n<b><u>Bon de travail</u></b>\n"
         "\nSEJQ = Pad       SYSTEM et Guichet = Bon de travail bureautech + Bavard"
         "\n\n\n<b><u>Call in</u></b>\n"
@@ -298,14 +299,14 @@
         "\n\n\n<b><u>Bon de travail</u></b>\n"
         "\nImprimez les documents PDF envoyés par courriel + y joindre copie du waybill UPS en cours."
         "\n\n\n<b><u>Call in</u></b>\n"
-        "\nPas nécessaire pour ce sous-traitant."
+        "\nAvec Proservice"
         "\n\nDell"
         "Il est obligatoire d’appeler Dell lorsque le temps sur site dépasse 1 h 00. Donc, avant d’appeler Progitech pour obtenir votre autorisation pour facturer plus d’une heure, vous devrez avoir obtenu le nom et badge de l’agent Dell. La raison pour laquelle le travail dure plus d’une heure et les informations de l’agent sont nécessaires pour que nous puissions facturer Unisys, d’où l’importance de nous les fournir."
         "\n\nLexmark"
         "Il est obligatoire d’appeler Lexmark lorsque le temps sur site dépasse 1 h 30. Donc, avant d’appeler Progitech pour obtenir votre autorisation pour facturer plus de 1h30, vous devrez avoir obtenu le nom de l’agent Lexmark. La raison pour laquelle le travail dure plus d’une heure et les informations de l’agent sont nécessaires pour que nous puissions facturer Unisys, d’où l’importance de nous les fournir."
         "Faute de ces informations, aucune autorisation ne sera fournie et aucun temps supplémentaire ne sera payé. "
         "\n\nEt SVP, donner le plus de détail possible, autant à Dell qu’aux répartiteurs Progitech. "
-        "\n\nGlobal Payement Si votre appareil est DOA, il faut contacter Appel Express pour faire ouvrir un nouvel appel avec votre équipement de spare au 1-855-361-3488."
+        "\n\nGlobal Payement Si votre appareil est DOA, il faut contacter Apple Express pour faire ouvrir un nouvel appel avec votre équipement de spare au 1-855-361-3488."
         "\n\n\n<b><u>Support</u></b>\n"
         "\nUnisys = 1-800-361-2139        Lexmark = 1-800-453-9787 PIN # 55156173"
         "\n\n\n<b><u>Call out et fermeture</u></b>\n"
@@ -405,4 +406,11 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="title_activity_aide_memoire_compucom">AideMemoireCompucom</string>
+    <string name="title_activity_aide_memoire_compugen">AideMemoireCompugen</string>
+    <string name="title_activity_aide_memoire_maxwell">AideMemoireMaxwell</string>
+    <string name="title_activity_aide_memoire_msc">AideMemoireMSC</string>
+    <string name="title_activity_aide_memoire_ncr">AideMemoireNCR</string>
+    <string name="title_activity_aide_memoire_progitech">AideMemoireProgitech</string>
+    <string name="title_activity_aide_memoire_ricoh">AideMemoireRicoh</string>
 </resources>

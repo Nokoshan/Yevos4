@@ -55,25 +55,32 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, AideMemoireCPU.class);
             startActivity(intent);
         } else if (text.equals("Compucom")) {
-            text = "Compucom";
+            Intent intent = new Intent(this, AideMemoireCompucom.class);
+            startActivity(intent);
         } else if (text.equals("Compugen")) {
-            text = "Compucom";
+            Intent intent = new Intent(this, AideMemoireCompugen.class);
+            startActivity(intent);
         } else if (text.equals("Diebold")) {
             Intent intent = new Intent(this, AideMemoireDiebold.class);
             startActivity(intent);
         } else if (text.equals("Maxwell")) {
-            text = "Compucom";
+            Intent intent = new Intent(this, AideMemoireMaxwell.class);
+            startActivity(intent);
         } else if (text.equals("Multitech")) {
             Intent intent = new Intent(this, AideMemoireMultitech.class);
             startActivity(intent);
         } else if (text.equals("MSC")) {
-            text = "Compucom";
+            Intent intent = new Intent(this, AideMemoireMSC.class);
+            startActivity(intent);
         } else if (text.equals("NCR")) {
-            text = "Compucom";
+            Intent intent = new Intent(this, AideMemoireNCR.class);
+            startActivity(intent);
         } else if (text.equals("Progitech")) {
-            text = "Compucom";
+            Intent intent = new Intent(this, AideMemoireProgitech.class);
+            startActivity(intent);
         } else if (text.equals("Ricoh")) {
-            text = "Compucom";
+            Intent intent = new Intent(this, AideMemoireRicoh.class);
+            startActivity(intent);
         }
     }
 
