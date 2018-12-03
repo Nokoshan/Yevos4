@@ -189,6 +189,7 @@
         "\nUser : bureautech laurentides - Password : 974BUR265"
         "\n\nMcDonald : intranet CPU + Road Warrior Fujitsu : https://iportal.shopfujitsu.com/portal/page/portal/RoadWarrior/Login"
         "\nLogin : inclus dans l\'appel Fujitsu (ex: cpuottawa1@cpu.ca   Password : welcome1"
+        "\nLogin Bureautech : cpumlaurier@cpu.ca Password : welcome1"
         "\n\n\n<b><u>Support</u></b>\n"
         "\nTelus = CPU 1-888-681-6974 Option 777"
         "\nAutre contrat CPU = 1-888-681-6974 Option 888"
@@ -201,6 +202,9 @@
         "\nPour call Tim Hortons sur les TV de menu"
         "\nEn arrivant sur site, envoyer un email de call in a contentteam@sicom.com"
         "\nInclure le numero du restaurant, votre nom et votre # de cellulaire, ensuite le support vous contactera (en anglais)"
+        "\n\nMcDonald - pour entrer dans le menu gérant"
+        "\nUser : 9999     Pass : JMA (dernier chiffre du jour + mois + année)"
+        "\nExemple : 12 Avril 2018 le Pass est 842"
         "\n\n\n\n\n\n\n\n\n"
     </string>
     <string name="aidememoireCompucom">
@@ -223,7 +227,7 @@
     <string name="aidememoireCompugen">
         "<b><u>Réception</u></b>\nPar courriel + confirmation sur cellulaire du technicien de garde le soir et les fins de semaine"
         "\n(noter le nom de la personne sur votre Bavard Bureautech)."
-        "\n\nPetro Canada =Envoyé un ETA à DutyManagers pour qu’ils soient au courant 1-888-362-8302 Opt 1 (24Hrs).!"
+        "\n\nPetro Canada = Envoyé un ETA à DutyManagers pour qu’ils soient au courant 1-888-362-8302 Opt 1 (24Hrs).!"
         "\n\nPour les autres clients cela n’est pas nécessaire de fournir un eta."
         "\nLe soir et les fins de semaines le technicien doit faire ces updates sur l’intranet de COMPUGEN"
         "\n\nintrantet Compugen = https://emerge.compugen.com/emerge/tarupdate"
